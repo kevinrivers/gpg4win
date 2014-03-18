@@ -1,0 +1,25 @@
+{
+    "name": "gpg4win",
+    "version": "0.1.0",
+    "description": "Installs and configures gpg4win",
+    "long_description": "",
+    "maintainer": "Kevin Rivers",
+    "maintainer_email": "kevin@kevinrivers.com",
+    "license": "Apache 2.0",
+    "platforms": {
+        "windows": ">= 0.0.0"
+    },
+    "dependencies": {
+        "windows": "~>  1.2.6"
+    },
+    "recommendations": {},
+    "suggestions": {},
+    "conflicting": {},
+    "providing": {},
+    "replacing": {},
+    "attributes": {},
+    "groupings": {},
+    "recipes": {
+        "gpg4win": "Installs desired version of gpg4win."
+    }
+}
