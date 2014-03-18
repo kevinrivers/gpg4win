@@ -1,0 +1,27 @@
+[gpg4win]
+  ; Installation settings. Leave out or leave empty for  
+  ; Default settings
+  inst_gpgol = <%= node['gpg4win']['install']['gpgol'] %>
+  inst_gpgex = <%= node['gpg4win']['install']['gpgex'] %>
+  inst_kleopatra = <%= node['gpg4win']['install']['kleopatra'] %>
+  inst_gpa = <%= node['gpg4win']['install']['gpa'] %>
+  inst_claws_mail = <%= node['gpg4win']['install']['claws_mail'] %>
+  inst_compendium = <%= node['gpg4win']['install']['compendium'] %>
+
+  ; The locations at which linkages are to be prepared.
+  inst_start_menu = <%= node['gpg4win']['install']['start_menu'] %>
+  inst_desktop = <%= node['gpg4win']['install']['desktop'] %>
+  inst_quick_launch_bar = <%= node['gpg4win']['install']['quick_launch_bar'] %>
+
+  ; In contrast to the other options, this option overwrites
+  ; the user's settings in the installation assistant.
+  inst_start_menu_folder = <%= node['gpg4win']['install']['start_menu_folder'] %>
+
+  ; Standard configuration files.
+  gpg.conf = <%= node['gpg4win']['install']['gpg.conf'] %>
+  gpg-agent.conf = <%= node['gpg4win']['install']['gpg-agent.conf'] %>
+  trustlist.txt = <%= node['gpg4win']['install']['trustlist.txt'] %>
+  dirmngr.conf = <%= node['gpg4win']['install']['dirmngr.conf'] %>
+  dirmngr_ldapserver.conf = <%= node['gpg4win']['install']['dirmngr_ldapserver.conf'] %>
+  scdaemon.conf = <%= node['gpg4win']['install']['scdaemon.conf'] %>
+  gpa.conf = <%= node['gpg4win']['install']['gpa.conf'] %>
