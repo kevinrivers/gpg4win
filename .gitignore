@@ -7,9 +7,12 @@ Berksfile.lock
 .*.sw[a-z]
 *.un~
 /cookbooks
+Vagrantfile
+Berksfile
 
 # Bundler
 Gemfile.lock
 bin/*
 .bundle/*
 
+.DS_Store

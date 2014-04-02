@@ -45,3 +45,14 @@ default['gpg4win']['install']['dirmngr.conf'] = "#{node['gpg4win']['home']}\\dir
 default['gpg4win']['install']['dirmngr_ldapserver.conf'] = "#{node['gpg4win']['home']}\\dirmngr_ldapserver.conf"
 default['gpg4win']['install']['scdaemon.conf'] = "#{node['gpg4win']['home']}\\scdaemon.conf"
 default['gpg4win']['install']['gpa.conf'] = "#{node['gpg4win']['home']}\\gpa.conf"
+
+# Generate a GPG key
+default['gpg4win']['create_key'] = false
+default['gpg4win']['key']['key_type'] = "default"
+default['gpg4win']['key']['key_length'] = 2048
+default['gpg4win']['key']['expiration_date'] = 0
+default['gpg4win']['key']['real_name'] = nil
+default['gpg4win']['key']['comment'] = nil
+default['gpg4win']['key']['email'] = nil
+default['gpg4win']['key']['passphrase'] = nil
+

@@ -1,0 +1,10 @@
+%echo Generating a default key
+Key-Type: <%= @key_type %>
+Key-Length: <%= @key_length %>
+Name-Real: <%= @real_name %>
+Name-Comment: <%= @comment %>
+Name-Email: <%= @email %>
+Expire-Date: <%= @expiration_date %>
+<%= @passphrase %>
+%commit
+%echo done

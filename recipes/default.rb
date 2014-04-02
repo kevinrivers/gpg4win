@@ -18,37 +18,3 @@
 # limitations under the License.
 #
 
-install_path = node['gpg4win']['install']['path']
-
-# Download the appropiate version
-version = node['gpg4win']['version']
-gpg4win_pkg = "#{Chef::Config[:file_cache_path]}/gpg4win-#{version}.exe"
-remote_file gpg4win_pkg do
-  source node['gpg4win']['pkg_url']
-  rights :read, "Everyone"
-  backup 1
-end
-
-# Control file
-control_file = "#{Chef::Config[:file_cache_path]}/gpg4win.ini"
-template control_file do
-  source 'gpg4win.ini.erb'
-  rights :read, "Everyone"
-end
-
-windows_reboot 59 do
-  reason "Reboot required after gpg4win install (ver: #{version})"
-  action :nothing
-end
-
-# Run the installer
-windows_batch "install_gpg4win" do
-  code "#{Chef::Config[:file_cache_path]}/gpg4win-#{version}.exe /S /C=#{control_file} /D=#{install_path}"
-  not_if {::File.exists?("#{install_path}/gpg2.exe")}
-  notifies :request, 'windows_reboot[59]'
-end
-
-# Set GPG Home environment variable
-env "GNUPGHOME" do
-  value "#{node['gpg4win']['home']}"  
-end
